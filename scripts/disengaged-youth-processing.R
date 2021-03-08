@@ -16,7 +16,7 @@ source('./scripts/acsHelpers.R')
 # Get geography object for CT and subcounty divisions
 acsdata <- getACSData(
     getCTGeos("town"),
-    yearList = 2010:2018,
+    yearList = 2010:2019,
     table = "B14005"
 )
 
@@ -203,7 +203,7 @@ final_dataset <- final_dataset %>%
 # write to table
 write.table(
     final_dataset,
-    file.path(getwd(), "data", "disengaged-youth-2018.csv"),
+    file.path(getwd(), "data", "disengaged-youth-2019.csv"),
     sep = ",",
     row.names = F, 
     na="-9999"
